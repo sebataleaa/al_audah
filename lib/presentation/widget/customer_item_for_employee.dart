@@ -1,3 +1,5 @@
+import 'package:al_audah/presentation/screens/employee/customers_view_for_employee.dart';
+import 'package:al_audah/presentation/screens/employee/edit_customer_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -75,7 +77,9 @@ class  CustomerItemForEmployee extends StatelessWidget{
               borderRadius: BorderRadius.circular(40.r),
             ),
             child: TextButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder:(context)=>CustomersViewForEmployee()));
+              },
               child: Text(
                 'View',
                 style: TextStyle(
@@ -86,7 +90,9 @@ class  CustomerItemForEmployee extends StatelessWidget{
             ),
           ),
           TextButton(
-            onPressed: (){},
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder:(context)=>EditCustomerScreen()));
+            },
             child: Text(
               'Edit',
               style: TextStyle(

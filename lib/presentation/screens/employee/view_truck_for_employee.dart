@@ -16,10 +16,21 @@ class ViewTruckForEmployee extends StatelessWidget{
   String date = '25-07-2009';
 
   Widget RowTableItem(){
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-      child: GestureDetector(
-        onTap: (){},
+    return GestureDetector(
+      onTap: (){
+        //هون بدو يوديني لتفاصيل الرحلة
+      },
+      child: Container(
+        height: 80.h,
+        padding: EdgeInsets.symmetric(horizontal: 10.w),
+        margin: EdgeInsets.symmetric(horizontal: 20.0.w),
+        decoration: BoxDecoration(
+          color: AppColors.lightBlue,
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(50.r),
+            topRight: Radius.circular(50.r),
+          ),
+        ),
         child: Row(
           children: [
             Expanded(
@@ -78,7 +89,9 @@ class ViewTruckForEmployee extends StatelessWidget{
           child: TruckInformationText(),
         ),
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: Icon(
             Icons.chevron_left,
             color: AppColors.darkBlue,

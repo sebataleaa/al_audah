@@ -1,3 +1,4 @@
+import 'package:al_audah/presentation/screens/employee/view_trip_after_invoice_employee.dart';
 import 'package:al_audah/presentation/widget/branch_information_text.dart';
 import 'package:al_audah/presentation/widget/space_item.dart';
 import 'package:flutter/cupertino.dart';
@@ -14,53 +15,67 @@ class ViewBranchInformationScreen extends StatefulWidget {
       _ViewBranchInformationScreenState();
 }
 
-class _ViewBranchInformationScreenState extends State<ViewBranchInformationScreen> {
-
+class _ViewBranchInformationScreenState
+    extends State<ViewBranchInformationScreen> {
   String trip = 'DM-1-600';
   String driver = 'Mohammed Ali Hwidi';
   String date = '25-07-2009';
 
-  Widget RowTableItem(){
-   return Padding(
-     padding: const EdgeInsets.symmetric(horizontal: 20.0),
-     child: Row(
-       children: [
-         Expanded(
-           child: Text(
-             '${trip}',
-             style: TextStyle(
-               color: AppColors.pureBlack,
-               fontFamily: 'bahnschrift',
-               fontSize: 16.sp,
-             ),
-           ),
-         ),
-         Expanded(
-           child: Text(
-             '${driver}',
-             style: TextStyle(
-               color: AppColors.pureBlack,
-               fontFamily: 'bahnschrift',
-               fontSize: 16.sp,
-             ),
-           ),
-         ),
-         Expanded(
-           child: Text(
-             '${date}',
-             style: TextStyle(
-               color: AppColors.pureBlack,
-               fontFamily: 'bahnschrift',
-               fontSize: 16.sp,
-             ),
-           ),
-         ),
-       ],
-     ),
-   );
+  Widget RowTableItem() {
+    return GestureDetector(
+      onTap: (){
+        Navigator.push(context, MaterialPageRoute(builder:(context)=>ViewTripAfterInvoiceEmployee() /*ViewTripBeforInvoiceEmployee()*/));
+      },
+      child: Container(
+        height: 80.h,
+        padding: EdgeInsets.symmetric(horizontal: 10.w),
+        margin: EdgeInsets.symmetric(horizontal: 20.0.w),
+        decoration: BoxDecoration(
+          color: AppColors.darkBlue,
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(50.r),
+            topRight: Radius.circular(50.r),
+          ),
+        ),
+        child: Row(
+          children: [
+            Expanded(
+              child: Text(
+                '${trip}',
+                style: TextStyle(
+                  color: AppColors.pureWhite,
+                  fontFamily: 'bahnschrift',
+                  fontSize: 16.sp,
+                ),
+              ),
+            ),
+            Expanded(
+              child: Text(
+                '${driver}',
+                style: TextStyle(
+                  color: AppColors.pureWhite,
+                  fontFamily: 'bahnschrift',
+                  fontSize: 16.sp,
+                ),
+              ),
+            ),
+            Expanded(
+              child: Text(
+                '${date}',
+                style: TextStyle(
+                  color: AppColors.pureWhite,
+                  fontFamily: 'bahnschrift',
+                  fontSize: 16.sp,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
-  Widget buildTripsTable(){
+  Widget buildTripsTable() {
     return ListView.separated(
       itemBuilder: (context, index) {
         return RowTableItem();
@@ -79,7 +94,9 @@ class _ViewBranchInformationScreenState extends State<ViewBranchInformationScree
           child: BranchInformationText(),
         ),
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: Icon(
             Icons.chevron_left,
             color: AppColors.darkBlue,
@@ -98,7 +115,7 @@ class _ViewBranchInformationScreenState extends State<ViewBranchInformationScree
           DividerItem(),
           SpaceItem(),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            padding:  EdgeInsets.symmetric(horizontal: 30.0.w),
             child: Row(
               children: [
                 Expanded(
@@ -124,22 +141,22 @@ class _ViewBranchInformationScreenState extends State<ViewBranchInformationScree
                   ),
                 ),
                 Expanded(
-                    child: Text(
-                      'Date',
-                      style: TextStyle(
-                        color: AppColors.yellow,
-                        fontFamily: 'bahnschrift',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 17.sp,
-                      ),
+                  child: Text(
+                    'Date',
+                    style: TextStyle(
+                      color: AppColors.yellow,
+                      fontFamily: 'bahnschrift',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 17.sp,
                     ),
+                  ),
                 ),
               ],
             ),
           ),
           SpaceItem(),
           Expanded(
-              child: buildTripsTable(),
+            child: buildTripsTable(),
           ),
         ],
       ),

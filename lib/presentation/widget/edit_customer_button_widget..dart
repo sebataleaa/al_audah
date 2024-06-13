@@ -1,3 +1,4 @@
+import 'package:al_audah/presentation/screens/employee/edit_customer_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,12 +14,15 @@ class EditCustomerButtonWidget extends StatelessWidget{
       height: 40.h,
       width: 40.h,
       child: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder:(context)=>EditCustomerScreen()));
+        },
         child: Icon(
           Icons.edit,
           color: AppColors.yellow,
         ),
         elevation: 0.0,
+        heroTag: 'ec',
         backgroundColor: AppColors.darkBlue,
       ),
     );

@@ -1,3 +1,10 @@
+import 'package:al_audah/presentation/screens/employee/branches_list_for_employee.dart';
+import 'package:al_audah/presentation/screens/employee/customers_list_for_employee.dart';
+import 'package:al_audah/presentation/screens/employee/trips_list_for_employee.dart';
+import 'package:al_audah/presentation/screens/employee/trucks_list_for_employee.dart';
+import 'package:al_audah/presentation/widget/notification_report_lang_in_emp_categories_screen.dart';
+import 'package:al_audah/presentation/widget/search_in_emp_categories_screen.dart';
+import 'package:al_audah/presentation/widget/tell_us_text_in_categories_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,126 +14,21 @@ import '../../../constants/app_colors.dart';
 class CategoriesScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: ListView(
           children: [
-            Container(
-              height: 40.h,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  FloatingActionButton(
-                    onPressed: (){},
-                    shape: CircleBorder(
-                      side: BorderSide(
-                        color: AppColors.darkBlue,
-                      ),
-                    ),
-                    backgroundColor: AppColors.pureWhite,
-                    elevation: 0.0,
-                    child: Icon(
-                      Icons.notifications,
-                      color: AppColors.darkBlue,
-                    ),
-                  ),
-                  FloatingActionButton(
-                    onPressed: (){},
-                    shape: CircleBorder(
-                      side: BorderSide(
-                        color: AppColors.darkBlue,
-                      ),
-                    ),
-                    backgroundColor: AppColors.pureWhite,
-                    elevation: 0.0,
-                    child: Icon(
-                      Icons.report_problem,
-                      color: AppColors.darkBlue,
-                    ),
-                  ),
-                  FloatingActionButton(
-                    onPressed: (){},
-                    shape: CircleBorder(
-                      side: BorderSide(
-                        color: AppColors.darkBlue,
-                      ),
-                    ),
-                    backgroundColor: AppColors.pureWhite,
-                    elevation: 0.0,
-                    child: Text(
-                      'EN',
-                      style: TextStyle(
-                        color: AppColors.darkBlue,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            NotificationReportLangInEmpCategoriesScreen(),
             SizedBox(
               height: screenHeight/30,
             ),
-            Container(
-              height: 40.h,
-              child: TextFormField(
-                cursorColor: AppColors.darkBlue,
-                decoration: InputDecoration(
-                  isDense: true,
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: AppColors.darkBlue,
-                    ),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(50.r),
-                    ),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: AppColors.darkBlue,
-                    ),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(50.r),
-                    ),
-                  ),
-                  hintText: 'Search',
-                  hintStyle: TextStyle(
-                    color: AppColors.darkBlue,
-                    // fontSize: 14.0,
-                    fontFamily: 'Bahnschrift',
-                  ),
-                  prefixIcon: Icon(
-                    Icons.search,
-                    color: AppColors.darkBlue,
-                  ),
-                ),
-              ),
-            ),
+            SearchInEmpCategoriesScreen(),
             SizedBox(
               height: screenHeight/30,
             ),
-            Text(
-              'Tell us',
-              style: TextStyle(
-                color: AppColors.darkBlue,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Bauhaus',
-                fontSize: 20.sp,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            Text(
-              'where do you want to go?',
-              style: TextStyle(
-                color: AppColors.darkBlue,
-                fontFamily: 'bahnschrift',
-                fontSize: 18.sp,
-              ),
-              textAlign: TextAlign.center,
-            ),
+           TellUsScreenInCategoriesScreen(),
             Container(
               height: 240.r,
               // color: Colors.lightBlue,
@@ -167,7 +69,9 @@ class CategoriesScreen extends StatelessWidget{
                           ),
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder:(context)=>TripsListForEmployee()));
+                          },
                           icon: Icon(
                             Icons.directions,
                             color: AppColors.darkBlue,
@@ -222,7 +126,9 @@ class CategoriesScreen extends StatelessWidget{
                           ),
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder:(context)=>TrucksListForEmployee()));
+                          },
                           icon: Icon(
                             Icons.directions,
                             color: AppColors.darkBlue,
@@ -274,7 +180,9 @@ class CategoriesScreen extends StatelessWidget{
                           ),
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder:(context)=>CustomersListForEmployee()));
+                          },
                           icon: Icon(
                             Icons.directions,
                             color: AppColors.darkBlue,
@@ -326,7 +234,9 @@ class CategoriesScreen extends StatelessWidget{
                           ),
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder:(context)=>BranchesListForEmployee()));
+                          },
                           icon: Icon(
                             Icons.directions,
                             color: AppColors.darkBlue,

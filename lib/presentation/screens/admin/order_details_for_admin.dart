@@ -8,6 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../constants/app_colors.dart';
 import '../../widget/divider_item.dart';
+import '../../widget/divider_space_item.dart';
 import '../../widget/order_details_text.dart';
 import '../../widget/package_info_in_order_details_admin.dart';
 import '../../widget/source_dest_in_order_details_for_admin.dart';
@@ -39,12 +40,13 @@ class OrderDetailsForAdmin extends StatelessWidget{
         children: [
           SpaceItem(),
           SourceDestInOrderDetailsForAdmin(),
-          DividerBetweenListElements(),
+          DividerSpaceItem(),
           SenderRecipientNotesInOrderDetailsForAdmin(),
-          DividerBetweenListElements(),
+          DividerSpaceItem(),
           PackageInfoInOrderDetailsAdmin(),
-          DividerBetweenListElements(),
+          DividerSpaceItem(),
           CostsInOrderDetailsAdmin(),
+          SpaceItem(),
         ],
       ),
     );

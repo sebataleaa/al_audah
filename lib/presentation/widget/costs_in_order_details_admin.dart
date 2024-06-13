@@ -273,7 +273,7 @@ class CostsInOrderDetailsAdmin extends StatelessWidget{
                     color: AppColors.mediumBlue,
                     child: Center(
                       child: Text(
-                        '${collection_adapter}',
+                        '${collection_discount}',
                         style: TextStyle(
                           fontFamily: 'bahnschrift',
                           color: AppColors.darkBlue,

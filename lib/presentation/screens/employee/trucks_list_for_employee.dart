@@ -4,7 +4,6 @@ import 'package:al_audah/presentation/widget/trucks_list_text.dart';
 import 'package:al_audah/presentation/widget/trucks_list_text_intro.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../constants/app_colors.dart';
 import '../../widget/build_trucks_list_for_employee.dart';
@@ -22,7 +21,9 @@ class TrucksListForEmployee extends StatelessWidget {
           child: TrucksListText(),
         ),
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: Icon(
             Icons.chevron_left,
             color: AppColors.darkBlue,

@@ -1,5 +1,6 @@
 import 'package:al_audah/presentation/widget/divider_between_list_elements.dart';
 import 'package:al_audah/presentation/widget/divider_item.dart';
+import 'package:al_audah/presentation/widget/hello_enter_new_information_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,7 +34,9 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
           child: AddCustomerText(),
         ),
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: Icon(
             Icons.chevron_left,
             color: AppColors.darkBlue,
@@ -50,40 +53,11 @@ class _AddCustomerScreenState extends State<AddCustomerScreen> {
           SizedBox(
             height: screenHeight/75,
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Text(
-              'Hello!',
-              style: TextStyle(
-                color: AppColors.yellow,
-                fontFamily: 'bahnschrift',
-                fontSize: 16.sp,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Text(
-              'Please Enter The Following Information',
-              style: TextStyle(
-                color: AppColors.darkBlue,
-                fontFamily: 'bahnschrift',
-                fontSize: 16.sp,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: screenHeight/75,
-          ),
-          DividerItem(),
+          HelloEnterNewInformationText(),
+          DividerBetweenListElements(),
           Expanded(
             child: ListView(
               children: [
-                SizedBox(
-                  height: screenHeight/75,
-                ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: Row(

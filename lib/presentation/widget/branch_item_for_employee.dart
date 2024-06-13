@@ -1,3 +1,4 @@
+import 'package:al_audah/presentation/screens/employee/view_branch_information_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -28,7 +29,9 @@ class BranchItemForEmployee extends StatelessWidget{
             ),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder:(context)=>ViewBranchInformationScreen()));
+            },
             icon: Icon(
               Icons.directions,
               color: AppColors.darkBlue,

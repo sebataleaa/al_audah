@@ -5,7 +5,6 @@ import 'package:al_audah/presentation/widget/divider_between_list_elements.dart'
 import 'package:al_audah/presentation/widget/search_in_customers_list_for_employee.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../widget/build_customers_list_for_employee.dart';
 import '../../widget/customers_list_text.dart';
@@ -30,7 +29,9 @@ class _CustomersListForEmployeeState extends State<CustomersListForEmployee> {
           child: CustomersListText(),
         ),
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: Icon(
             Icons.chevron_left,
             color: AppColors.darkBlue,

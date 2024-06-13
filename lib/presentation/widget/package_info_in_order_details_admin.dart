@@ -17,7 +17,7 @@ class PackageInfoInOrderDetailsAdmin extends StatelessWidget{
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      padding: EdgeInsets.symmetric(horizontal: 20.0.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

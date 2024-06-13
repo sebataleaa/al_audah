@@ -1,3 +1,4 @@
+import 'package:al_audah/presentation/screens/employee/add_customer_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -10,7 +11,9 @@ class AddCustomerButtonWidget extends StatelessWidget{
     return Container(
       width: double.infinity,
       child: FloatingActionButton(
-        onPressed: (){},
+        onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder:(context)=>AddCustomerScreen()));
+        },
         child: Text(
           'Add Customer',
           style: TextStyle(

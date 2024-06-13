@@ -64,6 +64,7 @@ class DeleteCustomerButtonWidget extends StatelessWidget{
           color: AppColors.yellow,
         ),
         elevation: 0.0,
+        heroTag: 'dc',
         backgroundColor: AppColors.darkBlue,
       ),
     );
