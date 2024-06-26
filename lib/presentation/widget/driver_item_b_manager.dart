@@ -1,12 +1,11 @@
-import 'package:al_audah/presentation/screens/branch_manager/edit_employee_b_manager.dart';
+
+import 'package:al_audah/presentation/screens/branch_manager/edit_driver_screen.dart';
 import 'package:al_audah/presentation/screens/branch_manager/view_driver_b_manager.dart';
-import 'package:al_audah/presentation/screens/branch_manager/view_employee_b_manager.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../constants/app_colors.dart';
-import '../screens/branch_manager/edit_driver_b_manager.dart';
 
 class  DriverItemB_Manager extends StatelessWidget{
 
@@ -93,7 +92,7 @@ class  DriverItemB_Manager extends StatelessWidget{
           ),
           TextButton(
             onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder:(context)=>EditDriverB_Manager()));
+              Navigator.push(context, MaterialPageRoute(builder:(context)=>EditDriverScreen()));
             },
             child: Text(
               'Edit',

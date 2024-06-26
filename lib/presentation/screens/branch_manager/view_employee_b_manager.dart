@@ -1,6 +1,6 @@
 import 'package:al_audah/presentation/screens/branch_manager/view_employees_powers_button_b_manager.dart';
 import 'package:al_audah/presentation/widget/divider_between_list_elements.dart';
-import 'package:al_audah/presentation/widget/edit_delete_promote_emp_butons.dart';
+import 'package:al_audah/presentation/widget/edit_delete_evaluate_emp_butons.dart';
 import 'package:al_audah/presentation/widget/employee_information_text.dart';
 import 'package:al_audah/presentation/widget/view_employee_information.dart';
 import 'package:flutter/cupertino.dart';
@@ -39,7 +39,7 @@ class ViewEmployeeB_Manager extends StatelessWidget{
           SizedBox(
             height: screenHeight / 75,
           ),
-          EditDeletePromoteEmpButtons(),
+          EditDeleteEvaluateEmpButtons(),
           DividerBetweenListElements(),
           ViewEmployeesPowersButtonB_Manager(),
           DividerBetweenListElements(),

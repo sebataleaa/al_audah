@@ -33,8 +33,6 @@ class _EnterEmployeeInformationState extends State<EnterEmployeeInformation> {
   DateTime selectedDate2 = DateTime.now();
   var gender = ["Male", "Female", ""];
   var selectedGender = "";
-  var departments = ["Financial", "Warehouses",""];
-  var selectedDepartment= "";
 
   void datePicker1(BuildContext context) {
     showDatePicker(
@@ -399,50 +397,6 @@ class _EnterEmployeeInformationState extends State<EnterEmployeeInformation> {
                       filled: true,
                       fillColor: AppColors.mediumBlue,
                       border: InputBorder.none,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            SpaceItem(),
-            Row(
-              children: [
-                Text(
-                  'Dept',
-                  style: TextStyle(
-                    fontFamily: 'bahnschrift',
-                    color: AppColors.darkBlue,
-                    fontSize: 16.sp,
-                  ),
-                ),
-                SizedBox(
-                  width: screenWidth / 7.8,
-                ),
-                Expanded(
-                  child: Container(
-                    color: AppColors.mediumBlue,
-                    height: 40.h,
-                    padding: EdgeInsets.symmetric(horizontal: 10.0),
-                    child: DropdownButtonHideUnderline(
-                      child: DropdownButton(
-                        borderRadius: BorderRadius.circular(10.0),
-                        dropdownColor: AppColors.yellow,
-                        iconEnabledColor: AppColors.darkBlue,
-                        items: departments.map(
-                              (String item) {
-                            return DropdownMenuItem<String>(
-                              value: item,
-                              child: Text(item),
-                            );
-                          },
-                        ).toList(),
-                        onChanged: (thedept) {
-                          setState(() {
-                            selectedDepartment= (thedept.toString());
-                          });
-                        },
-                        value: selectedDepartment,
-                      ),
                     ),
                   ),
                 ),

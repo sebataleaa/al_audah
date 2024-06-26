@@ -40,7 +40,6 @@ class _EditEmployeeInformationState extends State<EditEmployeeInformation> {
   String editedMotherName = '';
   String editedBirthDate = '';
   String editedBirthPlace = '';
-  String editedDepartment = '';
   String editedRank = '';
   String editedSalary = '';
   bool showDate = false;
@@ -943,37 +942,6 @@ class _EditEmployeeInformationState extends State<EditEmployeeInformation> {
                   child: Center(
                     child: Text(
                       '${employee_rate}',
-                      style: TextStyle(
-                        fontFamily: 'bahnschrift',
-                        fontSize: 16.sp,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          SpaceItem(),
-          Row(
-            children: [
-              Text(
-                'Dept',
-                style: TextStyle(
-                  fontFamily: 'bahnschrift',
-                  color: AppColors.darkBlue,
-                  fontSize: 16.sp,
-                ),
-              ),
-              SizedBox(
-                width: screenWidth/7.8,
-              ),
-              Expanded(
-                child: Container(
-                  height: 40.h,
-                  color: AppColors.mediumBlue,
-                  child: Center(
-                    child: Text(
-                      '${department}',
                       style: TextStyle(
                         fontFamily: 'bahnschrift',
                         fontSize: 16.sp,

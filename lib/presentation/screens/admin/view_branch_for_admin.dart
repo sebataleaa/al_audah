@@ -1,5 +1,6 @@
 import 'package:al_audah/presentation/widget/branch_information_for_admin.dart';
 import 'package:al_audah/presentation/widget/divider_between_list_elements.dart';
+import 'package:al_audah/presentation/widget/trucks_button_in_view_branch_for_admin.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,7 +9,7 @@ import '../../../constants/app_colors.dart';
 import '../../widget/branch_information_text.dart';
 import '../../widget/divider_item.dart';
 import '../../widget/prices_list_button_for_admin.dart';
-import '../../widget/row_for_edit_delete_branch.dart';
+import '../../widget/row_for_edit_delete_trucks_branch.dart';
 import '../../widget/space_item.dart';
 import '../../widget/trip_driver_date_row.dart';
 
@@ -101,7 +102,7 @@ class ViewBranchForAdmin extends StatelessWidget{
           SizedBox(
             height: screenHeight / 75,
           ),
-          RowForEditDeleteBranch(),
+          RowForEditDeleteTrucksBranch(),
           DividerBetweenListElements(),
           BranchInformationForAdmin(),
           DividerBetweenListElements(),

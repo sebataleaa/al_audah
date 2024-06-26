@@ -17,7 +17,6 @@ class AboutUsCompanyInfo extends StatelessWidget{
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
         children: [
-          SpaceItem(),
           Row(
             children: [
               Text(
@@ -110,7 +109,6 @@ class AboutUsCompanyInfo extends StatelessWidget{
               ),
             ],
           ),
-          SpaceItem(),
         ],
       ),
     );

@@ -1,4 +1,5 @@
 
+import 'package:al_audah/presentation/screens/branch_manager/view_employees_powers_for_b_manager.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,7 +17,7 @@ class ViewEmployeesPowersButtonB_Manager extends StatelessWidget{
         height: 40.h,
         child: FloatingActionButton(
           onPressed: () {
-           // Navigator.push(context, MaterialPageRoute(builder:(context)=>ViewPowersAdmin()));
+            Navigator.push(context, MaterialPageRoute(builder:(context)=>ViewEmployeesPowersForB_Manager()));
           },
           child: Text(
             'Powers',

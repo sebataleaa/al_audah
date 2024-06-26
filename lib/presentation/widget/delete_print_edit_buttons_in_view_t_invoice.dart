@@ -9,7 +9,7 @@ import '../../constants/app_colors.dart';
 
 class DeletePrintEditButtonsInViewTripInvoice extends StatelessWidget{
 
-  _deleteInvoice (BuildContext context) {
+  _deleteTruck (BuildContext context) {
     return showDialog(
       context: context,
       builder: (context) =>
@@ -66,7 +66,7 @@ class DeletePrintEditButtonsInViewTripInvoice extends StatelessWidget{
             width: 40.h,
             child: FloatingActionButton(
               onPressed: () {
-                _deleteInvoice(context);
+                _deleteTruck(context);
               },
               child: Icon(
                 Icons.delete,

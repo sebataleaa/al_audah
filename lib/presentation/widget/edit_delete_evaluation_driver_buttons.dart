@@ -1,5 +1,5 @@
 
-import 'package:al_audah/presentation/screens/branch_manager/edit_driver_b_manager.dart';
+import 'package:al_audah/presentation/screens/branch_manager/edit_driver_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -85,6 +85,7 @@ class _EditDeleteEvaluationDriverButtonsState extends State<EditDeleteEvaluation
                 color: AppColors.yellow,
               ),
               elevation: 0.0,
+              heroTag: 'delete driver',
               backgroundColor: AppColors.darkBlue,
             ),
           ),
@@ -93,13 +94,14 @@ class _EditDeleteEvaluationDriverButtonsState extends State<EditDeleteEvaluation
             width: 40.h,
             child: FloatingActionButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder:(context)=>EditDriverB_Manager()));
+                Navigator.push(context, MaterialPageRoute(builder:(context)=>EditDriverScreen()));
               },
               child: Icon(
                 Icons.edit,
                 color: AppColors.yellow,
               ),
               elevation: 0.0,
+              heroTag: 'edit driver',
               backgroundColor: AppColors.darkBlue,
             ),
           ),

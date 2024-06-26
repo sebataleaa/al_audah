@@ -1,4 +1,5 @@
 import 'package:al_audah/presentation/screens/admin/vacation_list_for_admin.dart';
+import 'package:al_audah/presentation/screens/branch_manager/vacation_list_for_b_manager.dart';
 import 'package:al_audah/presentation/widget/space_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,6 @@ class ViewEmployeeInformation extends StatelessWidget{
   double employee_salary = 500000;
   String employee_emp_date = "20/8/2024";
   String employee_resignation_date = "-";
-  String department = "Financial";
 
   @override
   Widget build(BuildContext context) {
@@ -339,7 +339,7 @@ class ViewEmployeeInformation extends StatelessWidget{
               Expanded(
                 child: GestureDetector(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder:(context)=>VacationListForAdmin()));
+                    Navigator.push(context, MaterialPageRoute(builder:(context)=>VacationListForB_Manager()));
                   },
                   child: Container(
                     height: 40.h,
@@ -410,37 +410,6 @@ class ViewEmployeeInformation extends StatelessWidget{
                   child: Center(
                     child: Text(
                       '${employee_rate}',
-                      style: TextStyle(
-                        fontFamily: 'bahnschrift',
-                        fontSize: 16.sp,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          SpaceItem(),
-          Row(
-            children: [
-              Text(
-                'Dept',
-                style: TextStyle(
-                  fontFamily: 'bahnschrift',
-                  color: AppColors.darkBlue,
-                  fontSize: 16.sp,
-                ),
-              ),
-              SizedBox(
-                width: screenWidth/7.8,
-              ),
-              Expanded(
-                child: Container(
-                  height: 40.h,
-                  color: AppColors.mediumBlue,
-                  child: Center(
-                    child: Text(
-                      '${department}',
                       style: TextStyle(
                         fontFamily: 'bahnschrift',
                         fontSize: 16.sp,

@@ -28,7 +28,10 @@ class BranchesListForAdminScreen extends StatelessWidget{
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                BranchesListIntroDecoration(),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20.0.w),
+                  child: BranchesListIntroDecoration(),
+                ),
                 Expanded(
                   child: buildBranchesListForAdmin(),
                 ),

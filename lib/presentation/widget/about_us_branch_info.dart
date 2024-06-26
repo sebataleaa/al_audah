@@ -21,7 +21,17 @@ class AboutUsBranchInfo extends StatelessWidget{
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Text(
+            'Branch Information',
+            style: TextStyle(
+              fontFamily: 'Bauhaus',
+              color: AppColors.yellow,
+              fontSize: 18.sp,
+            ),
+          ),
+          SpaceItem(),
           Row(
             children: [
               Text(

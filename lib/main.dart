@@ -6,10 +6,12 @@ import 'package:al_audah/presentation/screens/admin/add_powers_admin.dart';
 import 'package:al_audah/presentation/screens/admin/add_warehouse_manager_screen.dart';
 import 'package:al_audah/presentation/screens/admin/add_warehouse_screen.dart';
 import 'package:al_audah/presentation/screens/admin/admin_main_screen.dart';
+import 'package:al_audah/presentation/screens/admin/admin_profile_screen.dart';
 import 'package:al_audah/presentation/screens/admin/branches_list_for_admin_screen.dart';
 import 'package:al_audah/presentation/screens/admin/customer_view_for_admin.dart';
 import 'package:al_audah/presentation/screens/admin/customers_list_for_admin.dart';
 import 'package:al_audah/presentation/screens/admin/edit_branch_screen.dart';
+import 'package:al_audah/presentation/screens/admin/edit_warehouse_manager_screen.dart';
 import 'package:al_audah/presentation/screens/admin/effective_trip_record_for_admin.dart';
 import 'package:al_audah/presentation/screens/admin/employees_list_for_admin.dart';
 import 'package:al_audah/presentation/screens/admin/manifest_screen_for_admin.dart';
@@ -17,24 +19,40 @@ import 'package:al_audah/presentation/screens/admin/order_details_for_admin.dart
 import 'package:al_audah/presentation/screens/admin/prices_list_screen.dart';
 import 'package:al_audah/presentation/screens/admin/trips_list_for_admin.dart';
 import 'package:al_audah/presentation/screens/admin/vacation_list_for_admin.dart';
+import 'package:al_audah/presentation/screens/admin/view_archived_employee_for_admin.dart';
 import 'package:al_audah/presentation/screens/admin/view_branch_for_admin.dart';
 import 'package:al_audah/presentation/screens/admin/view_branch_manager_screen.dart';
 import 'package:al_audah/presentation/screens/admin/view_driver_for_admin.dart';
 import 'package:al_audah/presentation/screens/admin/view_employee_for_admin.dart';
 import 'package:al_audah/presentation/screens/admin/view_powers_admin.dart';
+import 'package:al_audah/presentation/screens/admin/view_warehoue_for_admin.dart';
 import 'package:al_audah/presentation/screens/branch_manager/add_driver_screen.dart';
 import 'package:al_audah/presentation/screens/branch_manager/add_employee_screen.dart';
 import 'package:al_audah/presentation/screens/branch_manager/add_powers_b_manager.dart';
+import 'package:al_audah/presentation/screens/branch_manager/add_truck_screen.dart';
+import 'package:al_audah/presentation/screens/branch_manager/b_manager_main_screen.dart';
+import 'package:al_audah/presentation/screens/branch_manager/b_manager_profile_screen.dart';
+import 'package:al_audah/presentation/screens/branch_manager/branches_list_for_b_manager.dart';
+import 'package:al_audah/presentation/screens/branch_manager/customers_list_for_b_manager.dart';
 import 'package:al_audah/presentation/screens/branch_manager/edit_employee_b_manager.dart';
+import 'package:al_audah/presentation/screens/branch_manager/edit_truck_screen.dart';
 import 'package:al_audah/presentation/screens/branch_manager/employees_list_for%20_b_manger.dart';
+import 'package:al_audah/presentation/screens/branch_manager/trips_list_for_b_manager.dart';
+import 'package:al_audah/presentation/screens/branch_manager/trucks_list_for_b_manager.dart';
+import 'package:al_audah/presentation/screens/branch_manager/vacation_list_for_b_manager.dart';
 import 'package:al_audah/presentation/screens/branch_manager/view_driver_b_manager.dart';
 import 'package:al_audah/presentation/screens/branch_manager/view_employee_b_manager.dart';
+import 'package:al_audah/presentation/screens/branch_manager/view_truck_for_b_manager.dart';
+import 'package:al_audah/presentation/screens/branch_manager/view_warehouse_for_b_manager.dart';
+import 'package:al_audah/presentation/screens/customer/customer_main_screen.dart';
+import 'package:al_audah/presentation/screens/customer/view_profile_for_customer.dart';
 import 'package:al_audah/presentation/screens/employee/add_complaint_screen_for_employee.dart';
 import 'package:al_audah/presentation/screens/employee/add_customer_screen.dart';
 import 'package:al_audah/presentation/screens/employee/add_trip_invoice.dart';
 import 'package:al_audah/presentation/screens/employee/add_trip_screen.dart';
 import 'package:al_audah/presentation/screens/employee/edit_trip_invoice_screen.dart';
 import 'package:al_audah/presentation/screens/employee/edit_trip_screen.dart';
+import 'package:al_audah/presentation/screens/employee/employee_profile_screen.dart';
 import 'package:al_audah/presentation/screens/employee/manifest_screen_for_employee.dart';
 import 'package:al_audah/presentation/screens/employee/tracking_screen_for_employee.dart';
 import 'package:al_audah/presentation/screens/employee/trips_list_for_employee.dart';
@@ -83,7 +101,7 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
           ),
           debugShowCheckedModeBanner: false,
-          home: EditTripInvoiceScreen(),
+          home: B_ManagerMainScreen(),
         );
       },
     );

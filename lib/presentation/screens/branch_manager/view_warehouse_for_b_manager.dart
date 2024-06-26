@@ -1,0 +1,51 @@
+
+import 'package:al_audah/presentation/widget/divider_space_item.dart';
+import 'package:al_audah/presentation/widget/space_item.dart';
+import 'package:al_audah/presentation/widget/warehouse_information_text.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import '../../../constants/app_colors.dart';
+import '../../widget/divider_item.dart';
+import '../../widget/edit_delete_warehouse_buttons.dart';
+import '../../widget/view_branch_warehouse_information.dart';
+
+class ViewWarehouseForB_Manager extends StatelessWidget{
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Align(
+          alignment: Alignment.centerRight,
+          child: WarehouseInformationText(),
+        ),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(
+            Icons.chevron_left,
+            color: AppColors.darkBlue,
+          ),
+        ),
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(1.0),
+          child: DividerItem(),
+        ),
+      ),
+      body: Column(
+        children: [
+          SpaceItem(),
+          SpaceItem(),
+          //EditDeleteWarehouseButtons(),
+          //DividerSpaceItem(),
+          Expanded(
+            child: ViewBranchWarehouseInformation(),
+          ),
+          SpaceItem(),
+          SpaceItem(),
+        ],
+      ),
+    );
+  }
+}
